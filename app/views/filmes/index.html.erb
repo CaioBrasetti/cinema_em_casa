@@ -1,0 +1,36 @@
+<p style="color: green"><%= notice %></p>
+
+
+<div class="jumbotron text-center">
+  <h1>Filmes</h1>
+</div>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Titulo</th>
+        <th>Data de Lançamento</th>
+        <th>Informações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @filmes.each do |filme| %>
+        <tr>
+          <td><%= filme.titulo %></td>
+          <td><%= filme.data_de_lancamento.strftime("%d/%m/%Y") %></td>
+          <td> <%= link_to "Mostrar este filme", filme %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div style="display: inline-block; margin-left: 600px">
+  <br>
+  <br>
+   <button type="button floatLeft" class="btn btn-dark" style="float: left">
+    <%= link_to "Novo Filme", new_filme_path%> 
+  </button>
+  <button type="button floatLeft" class="btn btn-dark" style=" float: rigth; margin-left: 5px">
+    <%= link_to "Voltar para a tela inicial", welcome_index_path%> 
+  </button>
+</div>

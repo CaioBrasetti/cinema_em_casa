@@ -1,0 +1,18 @@
+<div class="jumbotron text-left">
+  <h1>Novo Ator</h1>
+</div>
+
+
+
+<%= render "form", ator: @ator %>
+
+<br>
+
+<div>
+  <button type="button floatLeft" class="btn btn-dark" style="float: left">
+      <%= link_to "Voltar para Atores", ators_path %> 
+  </button>
+  <button type="button floatLeft" class="btn btn-dark" style=" float: rigth; margin-left: 5px">
+    <%= link_to "Voltar para a tela inicial", welcome_index_path%>
+  </button>
+</div>

@@ -1,0 +1,22 @@
+<div id="<%= dom_id atuacao %>">
+  <h4 style="float: left"> Nome do personagem: </h4>
+  <h3 style="float: left; margin-left: 10px"> <%= atuacao.nome_do_personagem %> </h3>
+</div>
+<br>
+<br>
+<br>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nome do ator:</th>
+      <th>Nome do filme:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= atuacao.ator.nome %></td>
+      <td><%= atuacao.filme.titulo %></td>
+    </tr>
+  </tbody>
+</table>

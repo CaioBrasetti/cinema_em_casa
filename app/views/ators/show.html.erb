@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ator %>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Popularidade:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%=  @person[0]["popularity"] %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+
+
+<button type="button floatLeft" class="btn btn-dark" style="float: left">
+    <%= link_to "Editar este Autor", edit_ator_path(@ator) %> 
+  </button>
+  <button type="button floatLeft" class="btn btn-dark" style=" float: rigth; margin-left: 5px">
+    <%= link_to "Voltar para Atores", ators_path %> 
+  </button>   
+  <br><br> 
+  <%= button_to "Deletar o Autor", @ator, method: :delete %>
+</div>

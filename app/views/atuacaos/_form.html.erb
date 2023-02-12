@@ -1,0 +1,31 @@
+<%= form_with(model: atuacao) do |form| %>
+  <% if atuacao.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(atuacao.errors.count, "error") %> prohibited this atuacao from being saved:</h2>
+      <ul>
+        <% atuacao.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <%= form.label :ator_id, style: "display: block" %>
+    <%= form.collection_select :ator_id, Ator.all, :id, :nome, prompt: 'Selecione o ator' %>
+  </div>
+
+  <div>
+    <%= form.label :filme_id, style: "display: block" %>
+    <%= form.collection_select :filme_id, Filme.all, :id, :titulo, prompt: 'Selecione o filme' %>
+  </div>
+
+  <div>
+    <%= form.label :nome_do_personagem, style: "display: block" %>
+    <%= form.text_field :nome_do_personagem %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+

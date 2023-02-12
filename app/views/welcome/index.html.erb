@@ -1,0 +1,21 @@
+<div class="jumbotron text-center">
+  <h1>Seja Bem-Vindo</h1>
+  <p><%= Date.today.strftime("%d/%m/%Y") %></p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h4><%= link_to "Atores", ators_path%></h4>
+      <%= link_to "Cadastro de Atores", new_ator_path%> 
+    </div>
+    <div class="col-sm-4">
+      <h4><%= link_to "Filmes", filmes_path%> </h4>
+      <%= link_to "Cadastro de Filmes", new_filme_path%> 
+    </div>
+    <div class="col-sm-4">
+      <h4><%= link_to "Atuações", atuacaos_path%></h4>
+      <%= link_to "Cadastro de Atuações", new_atuacao_path%>
+    </div>
+  </div>
+</div>
